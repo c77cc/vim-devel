@@ -1,7 +1,0 @@
-[submodule "bundle/ShowMarks"]
-    path = bundle/ShowMarks 
-    url = https://github.com/vim-scripts/ShowMarks.git
-
-[submodule "bundle/The-NERD-tree"]
-    path = bundle/The-NERD-tree
-    url = https://github.com/vim-scripts/The-NERD-tree.git
