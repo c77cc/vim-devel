@@ -1,0 +1,13 @@
+Vim commonly used configuration, plugins, debug for php(Xdebug)
+Plugins:
+    1. Winmanager
+    2. lookupfile
+    3. snipmate
+    4. showmarks
+    5. taglist
+    6. vim-xdebug
+    7. drawIt
+    8. php-doc
+    9. nerd-tree
+    10. genutils
+    11. minibufexpl
