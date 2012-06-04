@@ -1,0 +1,7 @@
+[submodule "ShowMarks"]
+    path = ShowMarks 
+    url = https://github.com/vim-scripts/ShowMarks.git
+
+[submodule "The-NERD-tree"]
+    path = The-NERD-tree
+    url = https://github.com/vim-scripts/The-NERD-tree.git
