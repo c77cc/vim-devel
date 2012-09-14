@@ -238,9 +238,29 @@ endif
 """"""""""""""""""""""""""""
 " XDebugger
 """""""""""""""""""""""""""
-let g:debuggerPort = 7777
-let g:debuggerMiniBufExpl = 1
-let g:debuggerMaxDepth = 8
-let g:debuggerTimeout = 10
-command Debug :python debugger_init(1)
-command D :Debug
+let g:vdebug_options= {
+    \   "port" : 7777,
+    \   "server" : 'localhost',
+    \   "timeout" : 20,
+    \   "on_close" : 'detach',
+    \   "break_on_open" : 1,
+    \   "ide_key" : '',
+    \   "remote_path" : "",
+    \   "local_path" : "",
+    \   "debug_window_level" : 0,
+    \   "debug_file_level" : 0,
+    \   "debug_file" : "",
+    \}
+let g:vdebug_keymap = {
+    \    "run" : "<F5>",
+    \    "run_to_cursor" : "<F1>",
+    \    "step_into" : "<F2>",
+    \    "step_over" : "<F3>",
+    \    "step_out" : "<F4>",
+    \    "close" : "<F6>",
+    \    "detach" : "<F7>",
+    \    "set_breakpoint" : "<F10>",
+    \    "get_context" : "<F11>",
+    \    "eval_under_cursor" : "<F12>",
+    \}
+
