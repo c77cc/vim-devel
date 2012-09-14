@@ -1,4 +1,4 @@
-Vim commonly used configuration, plugins, debug for php(Xdebug)
+Vim commonly used configuration, plugins, debug for php(Xdebug), php manual and doc, pretty syntax, auto-complete, lookup file, find function via cscope.
 Plugins:
     1. Winmanager
     2. lookupfile
