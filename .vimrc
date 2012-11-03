@@ -9,8 +9,20 @@ set syntax=on
 " 高亮当前行
 "set cursorline
 "配色方案
-"colorscheme desertEx
-colorscheme my_clean
+
+colorscheme terminal
+if has("gui_running")
+  colorscheme my_clean
+  set lines=64
+  set columns=130
+  set t_Co=256
+else
+  let g:CSApprox_loaded = 0
+"修正ubuntu下显示'CSApprox needs gui support - not loading'错误的问题
+  let g:CSApprox_verbose_level = 0
+endif
+
+
 " 去掉输入错误的提示声音
 set noeb
 " 在处理未保存或只读文件的时候，弹出确认
@@ -30,6 +42,8 @@ set ts=4
 set et
 " 只按一下 Backspace 就删除 4 个空格了
 set smarttab
+" 高亮80列
+set cc=120
 " Tab键的宽度
 " set tabstop=4
 " 统一缩进为4
@@ -86,8 +100,18 @@ nnoremap <C-o> :call PhpDocSingle()<CR>
 vnoremap <C-o> :call PhpDocRange()<CR>
 
 " PHP Manual
-set runtimepath+=~/.vim/phpdoc
-autocmd BufNewFile,Bufread *.ros,*.inc,*.php set keywordprg="help"
+"set runtimepath+=~/.vim/phpdoc
+"autocmd BufNewFile,Bufread *.ros,*.inc,*.php set keywordprg="help"
+autocmd FileType php setlocal keywordprg=pman
+
+"""""""""""""""""""""""""""
+" Erlang 
+"""""""""""""""""""""""""""
+autocmd BufEnter *.escript   if &filetype == '' | setlocal filetype=erlang | endif
+autocmd FileType erlang,haskell,ocaml   setlocal foldmethod=indent expandtab tabstop=4 shiftwidth=4 textwidth=0
+let erlang_folding     = 1
+let erlang_show_errors = 0
+let erlang_skel_header = {'author': 'c77cc <yaohuaq@gmail.com>'}
 
 """""""""""""""""""""""""""
 " Cscope
@@ -109,6 +133,11 @@ if has("cscope")
     set csverb
 endif
 
+
+""""""""""""""""""""""""""""
+"  EasyBuffer
+""""""""""""""""""""""""""""
+:nnoremap <C-b> :EasyBuffer<CR>
 
 """"""""""""""""""""""""""""
 "  缓冲区切换
@@ -238,29 +267,35 @@ endif
 """"""""""""""""""""""""""""
 " XDebugger
 """""""""""""""""""""""""""
-let g:vdebug_options= {
-    \   "port" : 7777,
-    \   "server" : 'localhost',
-    \   "timeout" : 20,
-    \   "on_close" : 'detach',
-    \   "break_on_open" : 1,
-    \   "ide_key" : '',
-    \   "remote_path" : "",
-    \   "local_path" : "",
-    \   "debug_window_level" : 0,
-    \   "debug_file_level" : 0,
-    \   "debug_file" : "",
-    \}
-let g:vdebug_keymap = {
-    \    "run" : "<F5>",
-    \    "run_to_cursor" : "<F1>",
-    \    "step_into" : "<F2>",
-    \    "step_over" : "<F3>",
-    \    "step_out" : "<F4>",
-    \    "close" : "<F6>",
-    \    "detach" : "<F7>",
-    \    "set_breakpoint" : "<F10>",
-    \    "get_context" : "<F11>",
-    \    "eval_under_cursor" : "<F12>",
-    \}
+"let g:debuggerPort = 7777
+"let g:debuggerMiniBufExpl = 1
+"let g:debuggerMaxDepth = 8
+"let g:debuggerTimeout = 10
+"command Debug :python debugger_init(1)
+"command D :Debug
 
+let g:vdebug_options= {
+ \   "port" : 7777,
+ \   "server" : 'localhost',
+ \   "timeout" : 20,
+ \   "on_close" : 'detach',
+ \   "break_on_open" : 1,
+ \   "ide_key" : '',
+ \   "remote_path" : "",
+ \   "local_path" : "",
+ \   "debug_window_level" : 0,
+ \   "debug_file_level" : 0,
+ \   "debug_file" : "",
+\}
+let g:vdebug_keymap = {
+\    "run" : "<F5>",
+\    "run_to_cursor" : "<F1>",
+\    "step_into" : "<F2>",
+\    "step_over" : "<F3>",
+\    "step_out" : "<F4>",
+\    "close" : "<F6>",
+\    "detach" : "<F7>",
+\    "set_breakpoint" : "<F10>",
+\    "get_context" : "<F11>",
+\    "eval_under_cursor" : "<F12>",
+\}
