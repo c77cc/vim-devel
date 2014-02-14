@@ -79,17 +79,6 @@ ColorSchemeEditor-treeview	ColorSchemeEditor.txt	/*ColorSchemeEditor-treeview*
 ColorSchemeEditor-variables	ColorSchemeEditor.txt	/*ColorSchemeEditor-variables*
 ColorSchemeEditor-whatsnew	ColorSchemeEditor.txt	/*ColorSchemeEditor-whatsnew*
 ColorSchemeEditor.txt	ColorSchemeEditor.txt	/*ColorSchemeEditor.txt*
-CursorLineCurrentWindow-dependencies	CursorLineCurrentWindow.txt	/*CursorLineCurrentWindow-dependencies*
-CursorLineCurrentWindow-description	CursorLineCurrentWindow.txt	/*CursorLineCurrentWindow-description*
-CursorLineCurrentWindow-history	CursorLineCurrentWindow.txt	/*CursorLineCurrentWindow-history*
-CursorLineCurrentWindow-ideas	CursorLineCurrentWindow.txt	/*CursorLineCurrentWindow-ideas*
-CursorLineCurrentWindow-installation	CursorLineCurrentWindow.txt	/*CursorLineCurrentWindow-installation*
-CursorLineCurrentWindow-known-problems	CursorLineCurrentWindow.txt	/*CursorLineCurrentWindow-known-problems*
-CursorLineCurrentWindow-limitations	CursorLineCurrentWindow.txt	/*CursorLineCurrentWindow-limitations*
-CursorLineCurrentWindow-todo	CursorLineCurrentWindow.txt	/*CursorLineCurrentWindow-todo*
-CursorLineCurrentWindow-usage	CursorLineCurrentWindow.txt	/*CursorLineCurrentWindow-usage*
-CursorLineCurrentWindow.txt	CursorLineCurrentWindow.txt	/*CursorLineCurrentWindow.txt*
-CursorLineCurrentWindow.vim	CursorLineCurrentWindow.txt	/*CursorLineCurrentWindow.vim*
 ShowMarksClearAll	showmarks.txt	/*ShowMarksClearAll*
 ShowMarksClearMark	showmarks.txt	/*ShowMarksClearMark*
 ShowMarksOn	showmarks.txt	/*ShowMarksOn*
@@ -527,4 +516,3 @@ vimwiki_i_<S-CR>	vimwiki.txt	/*vimwiki_i_<S-CR>*
 vimwiki_i_<Tab>	vimwiki.txt	/*vimwiki_i_<Tab>*
 viwmiki-global-options	vimwiki.txt	/*viwmiki-global-options*
 viwmiki-local-options	vimwiki.txt	/*viwmiki-local-options*
-w:persistent_cursorline	CursorLineCurrentWindow.txt	/*w:persistent_cursorline*

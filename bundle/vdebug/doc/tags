@@ -14,6 +14,7 @@ VdebugCommands	Vdebug.txt	/*VdebugCommands*
 VdebugEval	Vdebug.txt	/*VdebugEval*
 VdebugEvalExpression	Vdebug.txt	/*VdebugEvalExpression*
 VdebugEvalHighlighted	Vdebug.txt	/*VdebugEvalHighlighted*
+VdebugEvalUnderCursor	Vdebug.txt	/*VdebugEvalUnderCursor*
 VdebugIDEKey	Vdebug.txt	/*VdebugIDEKey*
 VdebugInstallation	Vdebug.txt	/*VdebugInstallation*
 VdebugIntro	Vdebug.txt	/*VdebugIntro*
