@@ -8,6 +8,7 @@ import vim
 import vdebug.breakpoint
 import vdebug.opts
 import vdebug.util
+import ast
 
 class Runner:
     """ Class that stitches together all the debugger components.
@@ -61,6 +62,18 @@ class Runner:
         else:
             status = self.api.run()
         self.refresh(status)
+        self.set_feature()
+
+    def set_feature(self):
+        sets = vdebug.opts.Options.get("feature_set")
+        if sets is None:
+            return False
+        vdebug.log.Log("starting set feature:" + sets, vdebug.log.Logger.INFO)
+        sdict = ast.literal_eval(sets)
+        for name, val in sdict.items():
+            if val.isdigit():
+                val = int(val)
+            self.api.feature_set(name, val)
 
     def refresh(self,status):
         """The main action performed after a deubugger step.
